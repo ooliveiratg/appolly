@@ -5,6 +5,7 @@ export const HeaderContainer = styled.header`
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-bottom: 67px;
     
 `
 export const SectionInformations = styled.section`
@@ -26,7 +27,7 @@ export const Informations= styled.p`
     font-size: 16px;
     font-weight: 400;
     margin-right: 30px;
-    color: white;
+    color: ${DefaultTheme.colors.white};
 `
 
 export const GroupSocialMedia = styled.div`
@@ -47,9 +48,9 @@ export const GroupSection = styled.section`
 
 export const NavContent = styled.div`
     display: flex;
+    padding: 8px 16px;
     margin: 59px 135px;
-    padding: 17px 52px;
-    background: white;
+    background: ${DefaultTheme.colors.white};
     border-radius: 5px;
     align-items: center;
     justify-content: space-between;
@@ -64,9 +65,9 @@ export const LinksNav = styled.p`
 export const ImageContainer = styled.div`
     position: absolute;
     z-index: 11;
-    background: white;
+    background: ${DefaultTheme.colors.white};
     border-radius: 5px;
-    left: 54%; 
+    left: 50%; 
     transform: translateX(-50%); 
 
     img{
@@ -78,3 +79,4 @@ export const ImageContainer = styled.div`
 export const LogoSpace = styled.div`
     width: 200px;
 `
+
