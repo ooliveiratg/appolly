@@ -1,6 +1,5 @@
 import { CardHero, CardHeroContainer, GroupButtons, HeroParagraph, HeroSubTitlte, HeroTitle, ImageHero, SectionHero } from "./styled";
 import CellPhoneImageHero from '../../assets/Home/cellphoneHero.png'
-import { Button } from "../../components/Button";
 import PlayStoreImageCard from '../../assets/Home/playStore.png'
 import AppleStoreImageCard from '../../assets/Home/AppleStore.png'
 
@@ -20,11 +19,9 @@ export function Home() {
                     DOWNLOAD APP NOW
                     </HeroSubTitlte>
                     <GroupButtons>
-                        <Button padding={""} borderRadius={""} fontSize={""} bgColor={""} children={<img src={PlayStoreImageCard} alt=""/>} color={""}>
-                        </Button>
+                    <img src={PlayStoreImageCard} alt="" />
 
-                        <Button padding={""} borderRadius={""} fontSize={""} bgColor={""} children={<img src={AppleStoreImageCard} alt=""/>} color={""}>
-                        </Button>
+                    <img src={AppleStoreImageCard} alt="" />
                     </GroupButtons>
                 </CardHero>
             </CardHeroContainer>

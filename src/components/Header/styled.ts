@@ -6,6 +6,11 @@ export const HeaderContainer = styled.header`
     justify-content: center;
     width: 100%;
     margin-bottom: 67px;
+
+    @media (max-width: 1280px) {
+        margin-bottom: 221px;
+        
+    }
     
 `
 export const SectionInformations = styled.section`

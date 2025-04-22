@@ -2,21 +2,23 @@ import { ReactNode } from "react"
 import { ButtonStyle } from "./styled"
 
 export interface ButtonProps {
-    padding: string;
+    width: string;
+    height: string;
     borderRadius: string;
     fontSize: string;
     bgColor: string;
     children:ReactNode;
     color:string;
 }
-export function Button({bgColor,borderRadius,children,fontSize,padding,color}:ButtonProps){
+export function Button({bgColor,borderRadius,children,fontSize,width,height,color}:ButtonProps){
    
     return(
     <ButtonStyle 
         bgColor={bgColor} 
         borderRadius={borderRadius}  
         fontSize={fontSize} 
-        padding={padding}
+        width={width}
+        height={height}
         color={color}
     >
             {children}
