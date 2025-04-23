@@ -6,9 +6,23 @@ import { LinksBeforeImage, LinksAfterImage } from "./data";
 import { FacebookLogo } from "@phosphor-icons/react/dist/ssr";
 import { ButtonStyle } from "../Button/styled";
 import { DefaultTheme } from "../../themes/default";
+import { useEffect, useState } from "react";
+import { Sidebar } from "../SideBar";
 
 
 export function Header(){
+    const [isNotbook,setIsNotbook] = useState(window.innerWidth <=1280)
+    
+    useEffect(() => {
+        const handleResize = () => {
+            setIsNotbook(window.innerWidth <=1280)
+        }
+        //“Toda vez que a tela for redimensionada, execute a função handleResize
+        window.addEventListener("resize", handleResize);
+        //Ela garante que, quando o componente for desmontado ou o efeito for reexecutado, o event listener seja removido
+        return () => window.removeEventListener("resize", handleResize)
+    },[])
+    
     return(
         <HeaderContainer>
             <SectionInformations>
@@ -28,32 +42,62 @@ export function Header(){
             </SectionInformations>
             <GroupSection>
                 <NavContent>
-                {LinksBeforeImage.map((LinksBeforeImage,index) => (
-                    <LinksNav key={index}>
-                        {LinksBeforeImage}
-                    </LinksNav>
-                ))}
-                <LogoSpace/>
-                <ImageContainer>
-                    <img src={logo} alt="logo com uma imagem de montanha do lado esquerdo e o nome da marca do lado APPOLY" />
-                </ImageContainer>
+                {!isNotbook &&(
+                <>
+                    {LinksBeforeImage.map((LinksBeforeImage,index) => (
+                        <LinksNav key={index}>
+                            {LinksBeforeImage}
+                        </LinksNav>
+                    ))}
+                    <LogoSpace/>
+                    <ImageContainer>
+                        <img src={logo} alt="logo com uma imagem de montanha do lado esquerdo e o nome da marca do lado APPOLY" />
+                    </ImageContainer>
+                    
+                    {LinksAfterImage.map((LinksAfterImage,index) => (
+                        <LinksNav key={index}>
+                            {LinksAfterImage}
+                        </LinksNav>
+                    ))}
                 
-                {LinksAfterImage.map((LinksAfterImage,index) => (
-                    <LinksNav key={index}>
-                        {LinksAfterImage}
-                    </LinksNav>
-                ))}
                
                     <ButtonStyle 
                         bgColor={`${DefaultTheme.colors["Royal blue"]}`}
                         fontSize="20px"
                         borderRadius="5px"
                         color={`${DefaultTheme.colors.white}`}
-                        padding="12px 15px 8px 16px"
-                        
+                        width={'158px'}
+                        height={'50px'}
                          >
                             DOWNLOAD
                     </ButtonStyle>
+                    </>
+                )}
+
+                { isNotbook && (
+                    <>
+                        <Sidebar/>
+                        <LogoSpace/>
+                    <ImageContainer>
+                        <img src={logo} alt="logo com uma imagem de montanha do lado esquerdo e o nome da marca do lado APPOLY" />
+                    </ImageContainer>
+                     
+                    <ButtonStyle 
+                        bgColor={`${DefaultTheme.colors["Royal blue"]}`}
+                        fontSize="20px"
+                        borderRadius="5px"
+                        color={`${DefaultTheme.colors.white}`}
+                        width={'158px'}
+                        height={'50px'}
+                         >
+                            DOWNLOAD
+                    </ButtonStyle>
+                    </>
+
+                )
+
+                
+                }
                 </NavContent>
             </GroupSection>
         </HeaderContainer>
