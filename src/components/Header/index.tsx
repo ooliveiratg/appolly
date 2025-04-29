@@ -22,7 +22,8 @@ export function Header(){
         //Ela garante que, quando o componente for desmontado ou o efeito for reexecutado, o event listener seja removido
         return () => window.removeEventListener("resize", handleResize)
     },[])
-    
+
+
     return(
         <HeaderContainer>
             <SectionInformations>
@@ -89,6 +90,9 @@ export function Header(){
                         color={`${DefaultTheme.colors.white}`}
                         width={'158px'}
                         height={'50px'}
+                        mobileWidth={'76px'}
+                        mobileHeight={'34px'}
+                        mobileFont={'10px'}
                          >
                             DOWNLOAD
                     </ButtonStyle>

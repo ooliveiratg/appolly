@@ -1,14 +1,15 @@
 import styled from "styled-components";
 import { DefaultTheme } from "../../themes/default";
+import BackgroundHomePage from '../../assets/Background/Background.png'
 
 export const HeaderContainer = styled.header`
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-bottom: 67px;
+    
+    background-image: url(${BackgroundHomePage});
 
     @media (max-width: 1280px) {
-        margin-bottom: 221px;
         
     }
     
@@ -18,7 +19,16 @@ export const SectionInformations = styled.section`
     justify-content: space-between;
     width: 100%;
     margin: 35px 135px;
+    
+    @media (max-width:1280px) {
+        margin: 25px 40px;
+    }
+
+    @media (max-width:390px) {
+        display: none;
+    }
 `
+
 
 export const GroupInformations = styled.div`
     display: flex;
@@ -30,9 +40,9 @@ export const GroupInformations = styled.div`
 
 export const Informations= styled.p`
     font-size: 16px;
-    font-weight: 400;
-    margin-right: 30px;
+    font-weight: 400; 
     color: ${DefaultTheme.colors.white};
+    cursor: pointer;
 `
 
 export const GroupSocialMedia = styled.div`
@@ -53,19 +63,33 @@ export const GroupSection = styled.section`
 
 export const NavContent = styled.div`
     display: flex;
-    padding: 8px 16px;
+    padding: 5px 5px 5px 52px ;
     margin: 59px 135px;
     background: ${DefaultTheme.colors.white};
     border-radius: 5px;
     align-items: center;
     justify-content: space-between;
 
+    @media (max-width:1280px) {
+        margin: 69px 40px;  
+        padding:  5px 5px 5px 18px;  
+    }
+
+    @media (max-width:375px) {
+        margin: 30px 16px;
+        padding: 3px 3px 3px 9px;
+    }
 `
 
 export const LinksNav = styled.p`
     font-size: 20px;
     font-weight: 600;
     color: ${DefaultTheme.colors["black-500"]};
+
+    &:hover{
+        color: ${DefaultTheme.colors["Royal blue-800"]};
+        text-decoration: underline ${DefaultTheme.colors["Royal blue-800"]} 2px;
+    }
 `
 export const ImageContainer = styled.div`
     position: absolute;
@@ -77,11 +101,22 @@ export const ImageContainer = styled.div`
 
     img{
         padding: 31px 17px;
+
+        @media (max-width:390px) {
+        width: 84px;
+
+        padding: 24px 10px;
+        }
        
     }
 `
 
 export const LogoSpace = styled.div`
     width: 200px;
+
+    @media (max-width:390px) {
+        width: 100px;
+    }
+
 `
 

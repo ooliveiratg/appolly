@@ -35,9 +35,11 @@ export const LinksNavSidebar = styled.p`
     display: block;
     width: 100%;
     cursor: pointer;
+    transition: color 0.5s, text-decoration 0.5s;
 
     &:hover{
         color: ${DefaultTheme.colors["Royal blue-800"]};
         text-decoration: underline ${DefaultTheme.colors["Royal blue-800"]} 2px;
     }
 `
+

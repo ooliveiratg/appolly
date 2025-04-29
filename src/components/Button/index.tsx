@@ -9,8 +9,11 @@ export interface ButtonProps {
     bgColor: string;
     children:ReactNode;
     color:string;
+    mobileWidth?: string;
+    mobileHeight?: string;
+    mobileFont?: string;
 }
-export function Button({bgColor,borderRadius,children,fontSize,width,height,color}:ButtonProps){
+export function Button({bgColor,borderRadius,children,fontSize,width,height,color,mobileWidth,mobileHeight,mobileFont}:ButtonProps){
    
     return(
     <ButtonStyle 
@@ -20,6 +23,9 @@ export function Button({bgColor,borderRadius,children,fontSize,width,height,colo
         width={width}
         height={height}
         color={color}
+        mobileWidth={mobileWidth}
+        mobileHeight={mobileHeight}
+        mobileFont={mobileFont}
     >
             {children}
 
