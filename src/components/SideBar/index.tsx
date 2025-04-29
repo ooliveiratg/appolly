@@ -1,9 +1,10 @@
-import { List, X } from "@phosphor-icons/react";
+import { Cursor, List, X } from "@phosphor-icons/react";
 import { ButtonStyle } from "../Button/styled";
 import { useState } from "react";
 import { SideBarItens } from "./data";
 import { ContainerLinksSideBar, GroupLinksSideBar, LinksNavSidebar, PositionButton} from "./styled";
 import { DefaultTheme } from "../../themes/default";
+import styled from "styled-components";
 
 
 export function Sidebar() {
@@ -13,10 +14,11 @@ export function Sidebar() {
   const handleSideBar = () => {
     setIsOpen(!isOpen);
   };
-
+  
   const handleCloseSideBar =() => {
+    setIsClose(false)
     if(isOpen){
-      setIsClose(!isClose)
+      setIsOpen(isClose)
     }
   }
 
@@ -30,7 +32,7 @@ export function Sidebar() {
         width={''}
         height={''}
         onClick={handleSideBar}
-        children={<List size={32} weight="bold" />}
+        children={<List size={32} weight="bold" alt="menu" />}
       />
       {console.log(isOpen)}
 
@@ -44,7 +46,8 @@ export function Sidebar() {
            width={'35px'}
            height={'35px'}
            color={`${DefaultTheme.colors.white}`}
-           children={<X size={20} weight="bold"/>}
+           onClick={handleCloseSideBar}
+           children={<X size={20} weight="bold" style={{cursor: 'pointer'}}/> }
            />
            </PositionButton>
 
