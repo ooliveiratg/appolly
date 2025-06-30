@@ -5,13 +5,15 @@ export interface CardsProps{
     height:string,
     title:string,
     description:string,
+    padding:string
 }
 
-export function CardInformations({description,height,title,width}:CardsProps) {
+export function CardInformations({description,height,title,width,padding}:CardsProps) {
     return(
         <ContainerCardInformations
          width={width} 
          height={height} 
+         padding={padding}
          >
             <img src={Check} alt="" />
         <GroupTextsCard>

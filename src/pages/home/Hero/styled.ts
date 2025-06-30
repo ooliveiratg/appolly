@@ -7,7 +7,7 @@ export const SectionHero = styled.section`
     justify-content:center;
     align-items: center;
     gap: 124px;
-    width: 100%;
+    width: 100vw;
     min-height: 100vh;
     background-image: url(${BackgroundHomePage});
     background-size: cover;
@@ -22,8 +22,9 @@ export const SectionHero = styled.section`
         align-items: normal;
     }
 
-    @media (max-width:470px) {
+    @media (max-width:556px) {
         flex-direction: column;
+        align-items: center;
     }
 
 `
@@ -41,7 +42,7 @@ export const CardHeroContainer = styled.div`
         height: 381px;
     }
 
-    @media (max-width:470px) {
+    @media (max-width:556px) {
        width: 323px;
        height: 358px;
        
@@ -68,7 +69,7 @@ export const CardHero = styled.div`
         padding: 14px 8px 0px 18px;
     }
 
-    @media (max-width:470px) {
+    @media (max-width:556px) {
        width: 323px;
        height: 318px;
        margin-top: 20px;
@@ -88,7 +89,7 @@ export const HeroTitle = styled.h1`
         line-height: 47px;
     }
 
-    @media (max-width:470px) {
+    @media (max-width:556px) {
         margin-bottom: 18px;
        font-size: 25px;
        line-height: 37px
@@ -105,7 +106,7 @@ export const HeroParagraph = styled.p`
         margin-bottom: 23px;
     }
 
-    @media (max-width:470px) {
+    @media (max-width:556px) {
         margin-bottom: 30px;
     }
 `
@@ -121,7 +122,7 @@ export const HeroSubTitlte = styled.h3`
         line-height: 30px;
     }
 
-    @media (max-width: 470px) {
+    @media (max-width: 556px) {
         margin-bottom: 18px ;
         
     }
@@ -137,7 +138,7 @@ export const GroupButtons = styled.div`
         height: 47px;
     }
 
-    @media (max-width:470px) {
+    @media (max-width:556px) {
        width: 108px;
        height: 34px;
     }
@@ -153,7 +154,7 @@ export const ImageHero = styled.div`
         margin-bottom: 229px;
     }
 
-    @media (max-width: 470px) {
+    @media (max-width: 556px) {
         position: relative;
         left: 20px;
         

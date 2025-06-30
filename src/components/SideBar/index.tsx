@@ -1,10 +1,9 @@
-import { Cursor, List, X } from "@phosphor-icons/react";
+import { List, X } from "@phosphor-icons/react";
 import { ButtonStyle } from "../Button/styled";
 import { useState } from "react";
 import { SideBarItens } from "./data";
 import { ContainerLinksSideBar, GroupLinksSideBar, LinksNavSidebar, PositionButton} from "./styled";
 import { DefaultTheme } from "../../themes/default";
-import styled from "styled-components";
 
 
 export function Sidebar() {

@@ -1,4 +1,5 @@
 import { About } from "./About";
+import { Feature } from "./Features";
 import { Hero } from "./Hero";
 
 export function Home() {
@@ -6,6 +7,7 @@ export function Home() {
         <>
             <Hero/>
             <About/>
+            <Feature/>
         </>
     )
 }

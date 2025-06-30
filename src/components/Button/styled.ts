@@ -21,7 +21,7 @@ export const ButtonStyle = styled.button<ButtonProps>`
     color: ${props => props.color};
     border: none;
 
-    @media (max-width:470px) {
+    @media (max-width:556px) {
         width: ${props => props.mobileWidth};
         height: ${props => props.mobileHeight};
         font-size: ${props => props.mobileFont};

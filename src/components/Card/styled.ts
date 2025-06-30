@@ -3,7 +3,8 @@ import { DefaultTheme } from "../../themes/default";
 
 interface CardsProps{
     width:string,
-    height:string
+    height:string,
+    padding:string
 }
 export const ContainerCardInformations = styled.div<CardsProps>`
     width: ${props => props.width};
@@ -13,12 +14,21 @@ export const ContainerCardInformations = styled.div<CardsProps>`
     justify-content: center;
     align-items: start;
     border-radius: 10px;
-    padding: 30px 20px 21px 18px;
+    padding: ${props => props.padding};
     gap: 6px;
+    margin-right: 20px;
 
-    img{
-        width: 24px;
+     @media (max-width: 900px) {
+        gap: 19px;
+        margin-right: 40px;
     }
+
+
+    @media (max-width: 556px) {
+        gap: 19px;
+        margin: 0px 16px;
+    }
+
 `
 
 export const GroupTextsCard = styled.article`
